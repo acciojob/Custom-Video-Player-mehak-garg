@@ -21,7 +21,20 @@ toggle.addEventListener("click",()=>{
 	}
 })
 ranges.addEventListener("input",(e)=>{
-	video.volume=e.target.value;
-	video.playBack=e.target.value;
+	if(e.target==ranges[0])
+		video.volume=e.target.value;
+	if(e.target==ranges[1])
+	vvideo.playBack=e.target.value;
 })
+skipButtons.addEventListener("click",(e)=>{
+	if(e.target===skipButtons[0])
+	{
+		video.currentTime-=10;
+	}
+	if(e.target===skipButtons[1])
+	{
+		video.currentTime+=25;
+	}
+})
+
 
